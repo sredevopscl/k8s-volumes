@@ -2,7 +2,7 @@ kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: nfs-client-provisioner
-  namespace: pv-demo
+  namespace: pv-nfs
 spec:
   selector:
     matchLabels:

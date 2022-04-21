@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   labels:
     app: ssd-storage-class-site
-  namespace: pv-demo
+  namespace: pv-nfs
   name: ssd-storage-class-nginx
 spec:
   replicas: 1
@@ -34,7 +34,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: ssd-storage-class-service
-  namespace: pv-demo
+  namespace: pv-nfs
 spec:
   selector:
     app: ssd-storage-class-site
@@ -45,7 +45,7 @@ spec:
 kind: Ingress
 apiVersion: networking.k8s.io/v1
 metadata:
-  namespace: pv-demo
+  namespace: pv-nfs
   name: ssd-storage-class-ingress
   annotations:
     kubernetes.io/ingress.class: traefik

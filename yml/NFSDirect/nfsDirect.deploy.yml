@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: nfs-direct-site
-  namespace: pv-demo
+  namespace: pv-nfs
   name: nfs-direct-nginx
 spec:
   replicas: 1

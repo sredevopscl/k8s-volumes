@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     app: host-mapped-site
-  namespace: pv-demo
+  namespace: pv-nfs
   name: host-mapped-nginx
 spec:
   replicas: 1
@@ -25,3 +25,14 @@ spec:
           volumeMounts:
             - name: host-mapped-nfs
               mountPath: /usr/share/nginx/html
+          resources:
+            requests:
+              cpu: 0m
+              memory: 0Mi
+            limits:
+              cpu: 100m
+              memory: 100Mi
+          ports:
+            - containerPort: 80
+              hostPort: 80
+              name: http

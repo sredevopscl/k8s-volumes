@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  namespace: pv-demo
+  namespace: pv-nfs
   name: host-mapped-pvc
 spec:
   storageClassName: manual
