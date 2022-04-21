@@ -24,7 +24,7 @@ spec:
           name: nfs-direct-site
           resources:
             limits:
-              cpu: 1
+              cpu: 100Mi  # CPU 
               memory: 100Mi
           volumeMounts:
             - name: nfs-direct-volume
